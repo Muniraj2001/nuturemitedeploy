@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 from .juzmin import JAZZMIN_SETTINGS
-
+import django_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -179,3 +179,5 @@ TWILIO_AUTH_TOKEN = '[AuthToken]'
 TWILIO_PHONE_NUMBER = 'whatsapp:+14155238886'
 account_sid = 'AC85e6f40cd406160a00298683f9939492'
 auth_token = '[AuthToken]'
+
+django_heroku.settings(locals())
